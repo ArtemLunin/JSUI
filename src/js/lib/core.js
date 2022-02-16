@@ -1,27 +1,18 @@
-(() => {
-	const $ = function (selector) {
-		const elements = document.querySelectorAll(selector);
-		const obj = {};
-		
-		obj.hide = () => {
-			elements.forEach(elem => {
-				elem.style.display = 'none';
-			});
-			return obj;
-		};
+const $ = function(selector) {
+	return new $.prototype.init(selector);
+};
 
-		obj.show = () => {
-			elements.forEach(elem => {
-				elem.style.display = '';
-			});
-			// возвращаем из всех методов, чтобы реализовать "цепочку" вызовов
-			return obj;
-		};
+$.prototype.init = function(selector) {
+	if (!selector) {
+		return this; // {}
+	}
+	Object.assign(this, document.querySelectorAll(selector));
+	this.length = document.querySelectorAll(selector).length;
+	return this;
+};
 
-		// возвращаем объект, чтобы можно было работать с ним из вызывающей функции
-		return obj;
-	};
+$.prototype.init.prototype = $.prototype;
 
-	// теперь сможем обращаться к глобальной функции
-	window.$ = $;
-})();
+window.$ = $;
+
+export default $;
