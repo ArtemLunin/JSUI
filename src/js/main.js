@@ -13,4 +13,4 @@ $('div').click(function() {
 // console.log($('button').html('123'));
 
 // $('.findme').fadeOut(1800);
-$('button').fadeIn(1800);
+// $('button').fadeIn(1800);
