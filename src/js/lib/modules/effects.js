@@ -29,7 +29,6 @@ $.prototype.fadeIn = function(dur, display, fin) {
 	for (let i = 0; i < this.length; i++) {
 		//  старый способ использовать параметр по умолчанию
 		this[i].style.display = display || 'block';
-
 		const _fadeIn = (complection) => {
 			this[i].style.opacity = complection;
 		}
