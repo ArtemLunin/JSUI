@@ -181,6 +181,19 @@
   .modal-footer {
     padding: 15px; }
 
+.accordion {
+  min-width: 700px; }
+  .accordion-head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+    padding: 0 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    color: #343a40;
+    cursor: pointer; }
+
 .text-cenetr {
   text-align: center; }
 
