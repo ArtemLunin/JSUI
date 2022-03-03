@@ -59,10 +59,10 @@ $.prototype.fadeOut = function(dur, fin) {
 }
 
 $.prototype.fadeToggle = function(dur, display, fin) {
+	console.log(this.length);
 	for (let i = 0; i < this.length; i++) {
 		if (window.getComputedStyle(this[i]).display === 'none') {
 			this[i].style.display = display || 'block';
-
 			const _fadeIn = (complection) => {
 				this[i].style.opacity = complection;
 			}
