@@ -45,3 +45,9 @@ $('#trigger').click(() => $('#trigger').createModal({
         ]
     }
 }));
+
+$().post('https://jsonplaceholder.typicode.com/posts', JSON.stringify({
+    title: 'artem',
+    name: 'lunin',
+}))
+    .then(res => console.log(res));
